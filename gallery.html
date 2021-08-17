@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,15 +38,14 @@
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/style.css" rel="stylesheet">
     
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.css" rel="stylesheet">
-    
+     <!-- <script src="/staticfiles/landing_page_gen/render.js"></script>   -->
     <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script> 
 </head>
 
 <body>
 
-
-
 <div class = "flex w-full flex-col">  
+    
 
 <div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
   <div x-data="{ open: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
@@ -60,7 +60,7 @@
         </svg>
       </button>
     </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex  lg:flex-row  lg:justify-center ">
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-center ">
     
       
 <a 
@@ -73,13 +73,15 @@
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
     href="services">Our Services
 </a>
-     
+ 
       
+        
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
     href="gallery">Our Best Work
 </a>
-     
+ 
+      
            
       
 <a 
@@ -93,11 +95,11 @@
 
 
     
-      <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"x-data="{open: false}">
+      <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline "x-data="{open: false}">
       
           <a target = "_blank"  x-on:click.prevent="open = true" class="" href="">Send us a Text</a>
             <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
-    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
+    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
             <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
         <div class="block mb-4 border border-gray-200 rounded-lg">
             <input type="text" name="first-name" id="0-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
@@ -134,10 +136,12 @@
 
 
     
-    
         
+    
+    
+    
  
-    <div id="" class="flex text-center justify-center items-center z-50 w-full lg:w-auto " x-data="{open: false}">
+    <div id="" class="flex text-center justify-center items-center  w-full lg:w-auto " x-data="{open: false}">
         
 <button 
  
@@ -148,12 +152,12 @@
  id="side-button" type="button" x-on:click.prevent="open = true" class=" 
   
 
-   mb-3 fixed bottom-0 -right-80 z-10 mr-3 md:mr-0 z-50 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900">
+   mb-3 fixed bottom-0 -right-80 z-10 mr-3 md:mr-0 z-40 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-gray-900 z-30">
     <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
 </button>
 
         <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
-    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
+    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
             <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
         <div class="block mb-4 border border-gray-200 rounded-lg">
             <input type="text" name="first-name" id="2-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
@@ -183,162 +187,166 @@
 </div>
     </div>
 
-    
-
-        <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden  mt-24   bg-white text-gray-900   md:pt-20 xl:pt-20 xl:pb-20">
-            <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-                <h2  style= "color:#ef6f22" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
-                <h2  style= "color:#d0d0d0" class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
-                <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [     [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/HK1PC67O29VU9IWP08W6K1PZ1HBIOVOEBLOBXPFW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/3SBSYA68C1XSHZ12TPK0EIRXHQXUJOYVOMN6SSBC.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/EJNWBCVHMJ3YEN8G24MAREPXON7PUCDTFXPR361P.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/N4N7ROHO3OWH5ROW7IEIMLOS75XTI7SA3O0KM8WZ.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/C2LUJV7UURW5EY3ZFR7E0MCDTNLAUFULH98Q2W74.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CV07HXF8SIPYF8Q555UXWTA0FYP6LSOVMPS6DWYP.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/R1X97Z07MYCBLNF4R18IXYIJ9PQZY7EJHKSY4AT4.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/JL5VQFOMEWGF72F732L0W6JXNCZLGHI12SF6T51M.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/B8WW7YFCI0W4N150FR0FQ0N9HPHQSPQPUHCNUZC6.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/ELVDX4XHMNSHSLKRDF2I7C10BW9EMMUOIKT5U2KE.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/PHNZ1WO90U5AWY3IB8HM7GKNKEQ9VG0LYBUJQB04.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/MHC90NENSMJFQKQ1WIGL4032T9VJZU0N6BY02BG6.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/8IF1N59XRWMAXSYITRBCZFS23AZJOOB5GQEW61I8.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
-                                        
-                        
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
-                                <video class="rounded shadow-md object-cover w-full h-60" loading="lazy" controls> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9XEPRVIIJR5WAV5LSHM1Z17C29YLN67LSVHMHU5M.quicktime" >
-                                </video>
-                            </div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/HK1PC67O29VU9IWP08W6K1PZ1HBIOVOEBLOBXPFW.jpeg"  alt = "Photo number 2 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SBSYA68C1XSHZ12TPK0EIRXHQXUJOYVOMN6SSBC.jpeg"  alt = "Photo number 3 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/EJNWBCVHMJ3YEN8G24MAREPXON7PUCDTFXPR361P.jpeg"  alt = "Photo number 4 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/N4N7ROHO3OWH5ROW7IEIMLOS75XTI7SA3O0KM8WZ.jpeg"  alt = "Photo number 5 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/C2LUJV7UURW5EY3ZFR7E0MCDTNLAUFULH98Q2W74.jpeg"  alt = "Photo number 6 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CV07HXF8SIPYF8Q555UXWTA0FYP6LSOVMPS6DWYP.jpeg"  alt = "Photo number 7 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/R1X97Z07MYCBLNF4R18IXYIJ9PQZY7EJHKSY4AT4.jpeg"  alt = "Photo number 8 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/JL5VQFOMEWGF72F732L0W6JXNCZLGHI12SF6T51M.jpeg"  alt = "Photo number 9 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/B8WW7YFCI0W4N150FR0FQ0N9HPHQSPQPUHCNUZC6.jpeg"  alt = "Photo number 10 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ELVDX4XHMNSHSLKRDF2I7C10BW9EMMUOIKT5U2KE.jpeg"  alt = "Photo number 11 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PHNZ1WO90U5AWY3IB8HM7GKNKEQ9VG0LYBUJQB04.jpeg"  alt = "Photo number 12 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/MHC90NENSMJFQKQ1WIGL4032T9VJZU0N6BY02BG6.jpeg"  alt = "Photo number 13 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                                        
-                            
-                                  
-                            <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8IF1N59XRWMAXSYITRBCZFS23AZJOOB5GQEW61I8.png"  alt = "Photo number 14 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        
-                     
-                                        
-            
-                    <div class=" z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" @click.away="open = false" >
 
 
+    <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden  mt-24   bg-white text-gray-900   md:pt-20 xl:pt-20 xl:pb-20">
+        <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <h2  style= "color:#ef6f22" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
+            <h2  style= "color:#d0d0d0" class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [     [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/HK1PC67O29VU9IWP08W6K1PZ1HBIOVOEBLOBXPFW.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/3SBSYA68C1XSHZ12TPK0EIRXHQXUJOYVOMN6SSBC.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/EJNWBCVHMJ3YEN8G24MAREPXON7PUCDTFXPR361P.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/N4N7ROHO3OWH5ROW7IEIMLOS75XTI7SA3O0KM8WZ.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/C2LUJV7UURW5EY3ZFR7E0MCDTNLAUFULH98Q2W74.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/CV07HXF8SIPYF8Q555UXWTA0FYP6LSOVMPS6DWYP.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/R1X97Z07MYCBLNF4R18IXYIJ9PQZY7EJHKSY4AT4.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/JL5VQFOMEWGF72F732L0W6JXNCZLGHI12SF6T51M.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/B8WW7YFCI0W4N150FR0FQ0N9HPHQSPQPUHCNUZC6.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/ELVDX4XHMNSHSLKRDF2I7C10BW9EMMUOIKT5U2KE.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/PHNZ1WO90U5AWY3IB8HM7GKNKEQ9VG0LYBUJQB04.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/MHC90NENSMJFQKQ1WIGL4032T9VJZU0N6BY02BG6.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/8IF1N59XRWMAXSYITRBCZFS23AZJOOB5GQEW61I8.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                                    
                     
-                    
-                        <div class="flex items-center justify-start w-12 m-2 ml-6 mb-4 md:m-2 z-50 absolute bottom-0 transform translate-x-12 md:translate-x-32">
-                        <button
-                                class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-opacity-75 bg-white"                                
-                                @click="open = false">
-                             <span class = "text-black"> <i class="fas fa-lg fa-times"></i> </span>
-                        </button>
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
+                            <video preload="metadata" class="rounded shadow-md object-cover w-full h-60" loading="lazy" controls> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9XEPRVIIJR5WAV5LSHM1Z17C29YLN67LSVHMHU5M.quicktime#t=0.5" >
+                            </video>
                         </div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/HK1PC67O29VU9IWP08W6K1PZ1HBIOVOEBLOBXPFW.jpeg"  alt = "Photo number 2 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3SBSYA68C1XSHZ12TPK0EIRXHQXUJOYVOMN6SSBC.jpeg"  alt = "Photo number 3 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/EJNWBCVHMJ3YEN8G24MAREPXON7PUCDTFXPR361P.jpeg"  alt = "Photo number 4 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/N4N7ROHO3OWH5ROW7IEIMLOS75XTI7SA3O0KM8WZ.jpeg"  alt = "Photo number 5 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/C2LUJV7UURW5EY3ZFR7E0MCDTNLAUFULH98Q2W74.jpeg"  alt = "Photo number 6 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/CV07HXF8SIPYF8Q555UXWTA0FYP6LSOVMPS6DWYP.jpeg"  alt = "Photo number 7 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/R1X97Z07MYCBLNF4R18IXYIJ9PQZY7EJHKSY4AT4.jpeg"  alt = "Photo number 8 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/JL5VQFOMEWGF72F732L0W6JXNCZLGHI12SF6T51M.jpeg"  alt = "Photo number 9 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/B8WW7YFCI0W4N150FR0FQ0N9HPHQSPQPUHCNUZC6.jpeg"  alt = "Photo number 10 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ELVDX4XHMNSHSLKRDF2I7C10BW9EMMUOIKT5U2KE.jpeg"  alt = "Photo number 11 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PHNZ1WO90U5AWY3IB8HM7GKNKEQ9VG0LYBUJQB04.jpeg"  alt = "Photo number 12 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/MHC90NENSMJFQKQ1WIGL4032T9VJZU0N6BY02BG6.jpeg"  alt = "Photo number 13 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8IF1N59XRWMAXSYITRBCZFS23AZJOOB5GQEW61I8.png"  alt = "Photo number 14 of Burley+Moore Enterprises&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                 
+                                    
+        
+                <div class="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" >
 
-                        <div class= "h-90 w-90 flex items-center justify-center overflow-hidden">
 
-                            <template  x-for="(slide, index, collection) in slides" :key="index">
-                                <div class="h-full w-full flex items-center justify-center absolute">
-                                    <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
-                                        x-show="activeSlide === index" 
-                                        x-transition:enter="transition ease-out duration-150"
-                                        x-transition:enter-start="opacity-0 transform scale-90"
-                                        x-transition:enter-end="opacity-100 transform scale-100"
-                                        x-transition:leave="transition ease-in duration-150"
-                                        x-transition:leave-start="opacity-100 transform scale-100"
-                                        x-transition:leave-end="opacity-0 transform scale-90">
+                
+                
+                    <div class="flex items-center justify-start w-12  ml-6 md:m-2 z-50 absolute bottom-1/4 md:bottom-0 transform translate-x-12 md:translate-x-32" >
+                    <button
+                     style= "background-color:#d0d0d0" 
+                            class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-gray-400"                                
+                            @click="open = false">
+                         <span class = "text-white"> <i class="fas fa-lg fa-times"></i> </span>
+                    </button>
+                    </div>
 
-                                        <template x-if="slide[1] === 'photo' ">
-                                            <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
-                                        </template>
-                                        
-                                        <template x-if="slide[1] != 'photo'  ">
-                                            <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
-                                            </video>
-                                        </template> 
-                                        
-                                    </div>
-                                    <div class="fixed text-white text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
-                                        x-show="activeSlide === index">
-                                        <span class="w-12 text-right" x-text="index + 1"></span>
-                                        <span class="w-4 text-center">/</span>
-                                        <span class="w-12 text-left" x-text="slides.length"></span>
-                                    </div>
+                    <div class= "h-90 w-90 flex items-center justify-center overflow-hidden">
+
+                        <template  x-for="(slide, index, collection) in slides" :key="index">
+                            <div class="h-full w-full flex items-center justify-center absolute">
+                                <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
+                                    x-show="activeSlide === index" 
+                                    x-transition:enter="transition ease-out duration-150"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+
+                                    <template x-if="slide[1] === 'photo' ">
+                                        <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
+                                    </template>
+                                    
+                                    <template x-if="slide[1] != 'photo'  ">
+                                        <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
+                                        </video>
+                                    </template> 
+                                    
                                 </div>
+                                <div  style= "color:#d0d0d0"  class="fixed text-gray-400 text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
+                                    x-show="activeSlide === index">
+                                    <span class="w-12 text-right" x-text="index + 1"></span>
+                                    <span class="w-4 text-center">/</span>
+                                    <span class="w-12 text-left" x-text="slides.length"></span>
+                                </div>
+                            </div>
                         </template>
 
-                        <div class="fixed z-50 bottom-0 mb-4 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center">
-                            <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
-                            <button 
-                                    type="button"
-                                    class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-opacity-75 bg-white  " 
-                                   
-                                    @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
-                                    <span class = "text-black"> <i class="fas fa-lg fa-chevron-left"></i> </span>
+                    <div class="fixed md:fixed z-50 absolute bottom-1/4 md:bottom-0 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center" @click.away="open = false">
+                        <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
+                        <button 
+                                type="button"
+                                 style= "background-color:#d0d0d0" 
+                                class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-gray-400" 
                                
-                            </button>
-                            </div>
-                            <div class="flex items-center justify-start w-12 md:ml-16">
-                            <button 
-                                    type="button"
-                                    class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-opacity-75 bg-white   "
-                                   
-                                    @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
-                               <span class = "text-black"> <i class="fas fa-lg fa-chevron-right"></i> </span>
-                            </button>
-                            </div>
+                                @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
+                                <span class = "text-white"> <i class="fas fa-lg fa-chevron-left"></i> </span>
+                           
+                        </button>
                         </div>
-
+                        <div class="flex items-center justify-start w-12 md:ml-16">
+                        <button 
+                                type="button"
+                                 style= "background-color:#d0d0d0" 
+                                class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center  bg-gray-400   "
+                               
+                                @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
+                           <span class = "text-white"> <i class="fas fa-lg fa-chevron-right"></i> </span>
+                        </button>
+                        </div>
                     </div>
+
                 </div>
-            </div>     
-    
-                
-        </div>
-    </div>
+            </div>
+            </div>
+        </div>     
+
+            
+</div>
+
     
 
 <section  style= "background-color:#ef6f22"   class="py-10 bg-gray-900">
